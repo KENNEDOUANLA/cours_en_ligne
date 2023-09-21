@@ -86,4 +86,4 @@ strong {
 
 /* ------------------- 17 ---------------------- */
   /* Apres inspection ,le blanc autour du cadre rouge de l'element main est une marge et est appliqué sur le body */
-  /* Oui l'element body a un parent : le html qui est de type block et cet élément peut avoir un cadre,des marges et paddins*/
+  /* Oui l'element body a un parent : le html qui est de type block et cet élément peut avoir un cadre,des marges et padding*/

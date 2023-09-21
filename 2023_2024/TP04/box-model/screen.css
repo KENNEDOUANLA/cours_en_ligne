@@ -1,0 +1,89 @@
+body{
+  width: 800px;
+  padding: 3em;
+  border: 1px solid green;
+  margin: 0 auto;
+}
+
+
+main {
+  border-left-width: 20px;  
+  border: 4px solid red;
+  /* width: 50%; */
+  
+}
+
+article {
+  border: 2px dotted #666;
+  /* margin: 30px; */
+  /* margin: 30px 5px; */
+  /* padding: 30px; */
+  width: 50%;
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px 100px;
+  box-sizing: border-box;
+  /* height: 10em; */
+  /* overflow: hidden; */
+  /* overflow: auto; */
+}
+
+h2, p {
+  background-color: gold;
+  border: 1px solid #AAA;
+  margin: 5px;
+  padding-left: 5em;
+  font-size: 100%;
+}
+
+strong {
+  border: 1px solid black;
+  background-color: tomato;
+  /* padding: 30px; */
+}
+/* ------------------ 2 ----------------*/
+    /* À votre avis, que va-t-il se passer si on ajoute exactement la même propriété à la règle portant sur les éléments de type strong ? */
+    /* reponse : etant donner que <strong> est un élément inline , la marge vertical n'est pas prise en compte */
+    /* Le faire : que se passe-t-il ? Est-ce conforme à vos attentes ? */
+    /* La marge ne s'applique que de façon horizontale. Non je m'attendais à une marge verticale et horizontale  */
+
+/* --------------- 3 ----------------- */
+    /* Quelle est la différence ? */
+    /* En modifiant le  margin: 30px; en margin: 30px 5px ; c'est la marge  verticale (top et bottom) qui est a 30px  et la marge horizontale (left et right) qui passe à 5px*/
+
+/* ---------------- 7 ----------------- */
+  /* Ajouter la propriété padding-left: 5em; à la règle h2, p. Le padding des titres et des paragraphes a-t-il la même apparence visuelle? */
+  /* visuellement l'element <h1> est plus décalé vers la droite */
+  /* Pourquoi ? */
+  /* Cela est dû à la taille des caractères du <h1> qui sont ont les valeurs plus grandes des éléments de <p> */
+  /* Ajouter la propriété font-size: 100% à cette règle. Que se passe-t-il ? Quel effet cela produit-il sur le padding ? */
+  /* Les deux éléments sont alignés verticalement de la même façon */
+
+/* --------------- 9 ------------------- */
+  /*  Ajouter la propriété border-left-width: 20px; à la fin de la première règle du fichier CSS */
+  /* Que se passe-t-il ? la largeur de la bordure gauche change et devient plus grande.Cette propriété devient prioritaire par rapport au border */
+  /* À votre avis, que va-t-il se passer si on déplace cette propriété au début de la règle, c'est-à-dire avant la règle border générale ? Le faire : que se passe-t-il ? Est-ce conforme à vos attentes ? */
+  /* En plaçant le border left width: 20 px; au début,  la propriété border reprend la priorité et cela est conforme à mes attentes */
+
+/* ----------------- 11 ----------------- */
+    /* Ajouter la propriété text-align: center à la règle sur les articles. Que se passe-t-il : la boîte des articles se retrouve-t-elle centrée dans le cadre rouge ? Sur quoi porte text-align ? */
+    /* Non la boîte ne se centralise pas dans le cadre rouge.le text-align porte sur les textes  */
+    /* Si on veut centrer la boîte des articles, c'est avec les marges qu'il faut le faire. Modifier la propriété margin de la règle sur les articles en y mettant margin: 30px auto. Que fait la valeur auto ? */
+    /* "margin: 30px auto;" centre l'élément en ajustant automatiquement les marges gauche et droite pour qu'elles soient égales, en fonction de la largeur disponible dans le conteneur parent. */
+
+/* -----------------  13 ---------------- */
+    /* Les articles (cadres pointillés) sont bien plus larges que la moitié de la largeur du main. car avec "padding: 30px 100px;", le rembourrage s'ajoute à la largeur totale de l'élément, ce qui signifie que la largeur réelle de chaque article sera de 50% (la largeur du contenu) plus 100 pixels de chaque côté (le rembourrage gauche et droit). Cela fait un total de 50% + 100px + 100px, ce qui est plus large que la moitié de la largeur du conteneur principal (main).*/
+
+/* ------------------ 15 ----------------  */
+  /* Ajouter la propriété height: 10em à la règle sur les articles. Que se passe-t-il ? */
+  /* En ajoutant la propriété height:10em , les elements de l'article deborde verticalement et aussi la hauteur du main est presque egale a la hauteur de l'article */
+
+/* ---------------------16 ------------------- */
+  /* Que se passe-t-il ? Cela vous semble-t-il une bonne idée ? */
+  /* Après avoir ajouté l'overflow: hidden, les éléments qui débordaient precedament sont invisibles .Ce n'est pas une bonne idée car les informations sont inaccesble aux utilisateurs */
+  /* Modifier la propriété en mettant overflow: auto. Que se passe-t-il ? */
+  /* Avec l'overflow: auto, j'ai la possibilité de scroller pour voir les éléments qui débordaient. */
+
+/* ------------------- 17 ---------------------- */
+  /* Apres inspection ,le blanc autour du cadre rouge de l'element main est une marge et est appliqué sur le body */
+  /* Oui l'element body a un parent : le html qui est de type block et cet élément peut avoir un cadre,des marges et paddins*/

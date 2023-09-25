@@ -1,0 +1,27 @@
+nav ul{
+    list-style-type: none;
+    border: 1px solid rgb(58, 125, 151);
+    padding: 0;
+    width: fit-content;
+    color: rgb(58, 125, 151);
+}
+#menu-vertical li{
+    border: 1px solid rgb(58, 125, 151);
+    border-left-width: 5px;
+    padding: 2px;
+    margin: 1px;
+    width: 160px;
+}
+
+#menu-horizontal ul{
+    display: flex;
+}
+#menu-horizontal ul li{
+    padding: 5px;
+    font-weight: bold;
+    
+}
+#menu-horizontal ul li:hover{
+    background-color: rgb(37, 81, 99);
+    color: white;
+}

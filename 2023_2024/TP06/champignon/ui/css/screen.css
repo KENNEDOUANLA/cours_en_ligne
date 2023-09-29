@@ -1,0 +1,97 @@
+/***************************/
+/* Règles à ne pas toucher */
+/***************************/
+
+main {
+  margin: auto;
+  max-width: 60em;
+  border: 1px solid #ddd;
+  padding: 1em;
+  background-color: #f1fcea;
+}
+
+h2 {
+  color: tomato;
+  background-color: #f7e9d7;
+}
+
+figure {
+  background-color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+aside,
+section {
+  border: 1px solid tomato;
+  width: 20em;
+  text-align: center;
+  margin: 1em auto;
+}
+
+section {
+  height: 30em;
+}
+
+.box {
+  border: 1px solid black;
+  width: 10em;
+  height: 5em;
+  margin: 1em auto;
+  padding: .5em;
+  background-color: gold;
+  background-image: url('../img/champi.png');
+}
+
+/***********************************/
+/* Ajoutez vos règles ci-dessous ! */
+/***********************************/
+
+#pixels{
+background-size: 100px 50px;
+}
+#pourcents{
+  background-size: 25% 50%;
+}
+#etire{
+  background-size: 100% 100%;
+}
+
+#couvrant{
+  background-size: cover;
+}
+article .box{
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+}
+#decalage{
+  background-position:left 20px top 50px ;
+}
+#decalage-droite{
+  background-position:left -20px top 50px ;
+}
+#centre{
+  background-position: center;
+}
+#centre-haut{
+background-position:top  center ;
+}
+#bas-droite{
+  background-position:bottom  right ;
+}
+#bas-droite-decale{
+  background-position:bottom  right 5px;
+}
+
+.info{
+    background-image: url('../img/champi.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: top 1em center;
+    background-size: 2em 2em;
+    padding: 3em 0.5em 0.5em;
+}
+#double{
+    background-size: 100% 50%;
+    background: url('../img/champi.png') no-repeat center/200px 200px, url('../img/champi.png') repeat-x 10% 100%;
+}

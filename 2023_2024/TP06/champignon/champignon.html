@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Champignons et images de fond</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="LOGINS">
+  <link rel="stylesheet" href="./ui/css/screen.css">
+</head>
+<body>
+<main>
+
+  <h2>Introduction</h2>
+  <p>Dans cet exercice, vous ne devez modifier le HTML que si l'énoncé vous le demande explicitement, et vous ne devez pas modifier l'emplacement des fichiers (sauf si l'énoncé vous le demande).</p>
+  <p>En revanche, n'hésitez pas à regarder le contenu du HTML, ça peut aider !</p>
+
+  <h2>Lier la feuille de style</h2>
+  <p>Modifier l'élément <code>link</code> dans l'en-tête de cette page pour y associer la feuille de style, <strong>en utilisant un chemin relatif</strong> (l'URL ne doit commencer ni par <code>https:</code>, ni par un slash).
+  Tant que les couleurs n'ont pas changé, c'est que ça n'a pas marché ; inutile de continuer !</p>
+
+  <h2>Une règle pour les boîtes</h2>
+  <p>Toutes les boîtes ci-dessous sont des <code>div</code> avec une classe <code>box</code>. Le CSS utilise cette classe pour leur donner une bordure, des marges/paddings, et des dimensions fixées.</p>
+  <p>Ajoutez une nouvelle règle à la fin du fichier CSS pour que toutes les boîtes aient la couleur de fond <code>gold</code>, grâce à la propriété <code>background-color</code>.</p>
+  <div class="box">une boîte</div>
+
+  <h2>Ajouter une image de fond</h2>
+  <p>On va maintenant ajouter comme image de fond à nos boîtes l'image suivante, dont le chemin relatif à partir de ce fichier HTML est <code>ui/img/champi.png</code>.</p>
+  <figure>
+    <img src="ui/img/champi.png" alt="emoji champignon">
+    <figcaption>
+      Un emoji champignon.
+      <small>Source : <a href="https://twemoji.twitter.com/">twemoji</a>, licence CC-BY 4.0</small>
+    </figcaption>
+  </figure>
+  <p>Pour ajouter une image de fond en CSS, il faut utiliser la propriété <code>background-image: url('blabla');</code>, où <code>blabla</code> est l'URL de l'image.
+  <p>Utilisez cette propriété dans la règle pour mettre le champignon en image de fond de toutes les boîtes, <strong>en utilisant un chemin relatif</strong> comme URL. <strong>Attention</strong>, les chemins relatifs dans le CSS sont résolus par rapport au chemin <strong>du fichier CSS</strong>, pas du fichier HTML !</p>
+  <div class="box">une autre boîte</div>
+  <p>Notez que l'image est répétée pour tapisser entièrement les boîtes, et qu'on voit par ailleurs la couleur de fond derrière l'image de fond <small>(car elle est partiellement transparente)</small>.
+  <p>Normalement, inverser l'ordre des deux propriétés dans notre règle ne devrait rien changer au résultat. Vérifiez-le (en n'oubliant pas de faire un <i lang="en">hard reload</i>). Si le résultat change, vous avez peut-être utilisé la propriété raccourci <code>background</code> : changez-la.</p>
+
+  <h2>Taille de l'image de fond</h2>
+
+  <p>La taille des images de fond en CSS est contrôlée par la propriété <code>background-size</code>. Allez regarder <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size">la page de MDN sur cette propriété</a>, et notamment l'exemple interactif au début. Utilisez cette page comme référence pour répondre aux questions suivantes.</p>
+  <p>Notez que chaque boîte a un identifiant distinct, ce qui permet de la cibler précisément depuis le CSS.
+Les autres boîtes de la page ne doivent pas changer !</p>
+
+  <ol>
+    <li>
+      Dans la boîte ci-dessous, d'identifiant <code>pixels</code>,
+      faites en sorte que chaque champignon prenne 100 pixels de largeur et 50 pixels de hauteur.
+      <div class="box" id="pixels">une boîte avec des champignons déformés</div>
+    </li>
+    <li>
+      Dans la boîte ci-dessous, d'identifiant <code>pourcents</code>,
+      faites en sorte qu'il y ait exactement quatre champignons en largeur et deux champignons en hauteur.
+      <div class="box" id="pourcents">une boîte avec huit champignons</div>
+  </li>
+    <li>
+      Dans la boîte ci-dessous, d'identifiant <code>etire</code>,
+      faites en sorte qu'il y ait exactement un seul champignon, étiré pour prendre toute la largeur et toute la hauteur.
+      <div class="box" id="etire">une boîte avec un seul champignon (déformé)</div>
+    </li>
+    <li>
+      Dans la boîte ci-dessous, d'identifiant <code>couvrant</code>,
+      utilisez le mot-clef <code>cover</code> comme valeur de <code>background-size</code>.
+      <div class="box" id="couvrant">une boîte couverte par un seul champignon non déformé</div>
+    </li>
+  </ol>
+
+  <h2>Répétition de l'image de fond</h2>
+  <p>Les boîtes ci-dessous sont dans un élément <code>article</code>. Ajouter une règle CSS pour que ces boîtes-là (mais pas les précédentes !) aient la couleur de fond <code>aquamarine</code>.</p>
+<article>
+      <div class="box">une boîte dans un <code>article</code></div>
+      <div class="box">une autre boîte dans un <code>article</code></div>
+</article>
+  <p>Ajoutez ensuite une propriété <code>background-repeat</code> à votre règle,
+  et testez les valeurs présentées dans <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat">la doc de <code>background-repeat</code> sur MDN</a>. Pour finir, choisir la valeur qui supprime toute répétition.
+
+  <h2>Position de l'image de fond</h2>
+  <p>Les boîtes ci-dessous sont également dans un <code>article</code>. Si tout s'est bien passé, elles doivent avoir comme image de fond un seul champignon, collé en haut à gauche. On va maintenant modifier sa position avec <code>background-position</code> : allez regarder <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position">la page de MDN sur cette propriété</a>, et aidez-vous-en pour répondre aux questions suivantes.</p>
+  <p>NB: une nouvelle fois, chaque boîte a un identifiant distinct — utilisez-le depuis le CSS, afin que les autres boîtes de la page ne soient pas impactées.</p>
+  <article>
+    <ol>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>decalage</code>,
+        faites en sorte que le champignon soit décalé de 20 pixels vers la droite et de 50 pixels vers le bas.
+        <div class="box" id="decalage">une boîte avec un champignon décalé</div>
+      </li>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>decalage-droite</code>,
+        faites en sorte que le champignon soit décalé de 20 pixels vers la <em>gauche</em> (utilisez une valeur négative !) et de 50 pixels vers le bas.
+        <div class="box" id="decalage-droite">une boîte avec un champignon décalé vers la gauche</div>
+      </li>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>centre</code>,
+        faites en sorte que le champignon soit centré horizontalement et verticalement.
+        <div class="box" id="centre">une boîte avec un champignon centré</div>
+      </li>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>centre-haut</code>,
+        faites en sorte que le champignon soit tout en haut, mais centré horizontalement.
+        <div class="box" id="centre-haut">une boîte avec un champignon centré en haut</div>
+      </li>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>bas-droite</code>,
+        faites en sorte que le champignon soit tout en bas à droite.
+        <div class="box" id="bas-droite">une boîte avec un champignon en bas à droite</div>
+      </li>
+      <li>
+        Dans la boîte ci-dessous, d'identifiant <code>bas-droite-decale</code>,
+        faites en sorte que le champignon soit également en bas à droite, mais cette fois
+        décalé de 5 pixels des bords.
+        <div class="box" id="bas-droite-decale">une boîte avec un champignon presque tout en bas à droite</div>
+      </li>
+    </ol>
+  </article>
+
+  <h2>Décorer un texte avec une image de fond</h2>
+  <p>Par définition, le texte d'un élément se retrouvera par-dessus le <i lang="en">background</i> de l'élément en question. Cependant, il est possible de tricher pour placer l'image de fond <em>à côté</em> du texte : il suffit de décaler le texte avec un padding.</p>
+  <p>L'encadré suivant est un <code>aside</code> de classe <code>info</code>. </p>
+  <aside class="info">
+    <h3>Champignons</h3>
+    <p>Il existe des milliers d'espèces de champignons rien qu'en France métropolitaine !</p>
+  </aside>
+  <ol>
+    <li>Ajoutez une règle ciblant la classe <code>info</code> pour lui mettre un fond blanc ainsi que notre champignon en image de fond, sans répétition.</li>
+    <li>Faites en sorte que le champignon soit centré horizontalement, à 1em du haut du cadre, et qu'il fasse 2em par 2em. Il devrait se retrouver derrière le titre de notre encadré.</li>
+    <li>Maintenant, toujours dans la même règle, mettez un padding de 3em en haut et 0.5em aux trois autres côtés.
+  </ol>
+  <p>Constatez que notre image de fond n'en est plus vraiment une : c'est plutôt une sorte d'icône. Pour obtenir ce résultat, on aurait pu mettre l'image dans le HTML avec un élément <code>img</code>, mais c'est moins approprié — c'est une image purement décorative, elle est à sa place dans le CSS !</p>
+
+  <h2>Optionnel : propriété raccourcie <code>background</code></h2>
+  <p>Allez voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background">la doc de la propriété raccourcie <code>background</code></a>, qui permet de déclarer tous les aspects des images de fond en une seule propriété.</p>
+  <p>Commentez la règle écrite dans la section précédente et réécrivez-en une qui soit équivalente en n'utilisant que deux propriétés, <code>background</code> et <code>padding</code>.
+
+  <h2>Optionnel : images de fond multiples</h2>
+  <p>Toutes les propriétés sur les <i lang="en">backgrounds</i> peuvent en réalité définir plusieurs images de fond (il suffit de les séparer par des virgules, voir la doc). Elles seront empilées les unes sur les autres, la première de la liste étant devant et la dernière la plus derrière.</p>
+  <p>Utilisez cette possibilité pour mettre deux fois l'image du champignon comme fond de l'encadré suivant, d'identifiant <code>double</code>. Celle de devant ne doit pas être répétée, doit être centrée et faire 200×200 pixels. Celle de derrière doit être répétée et la largeur de chaque champignon doit faire un dixième de la largeur de la boîte, sans déformation.</p>
+  <section id="double">Je suis l'encadré d'identifiant <code>double</code></section>
+
+</main>
+</body>
+</html>

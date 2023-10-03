@@ -1,0 +1,33 @@
+
+.conteneur {
+  border: 1px dotted #666;
+  background-color: plum;
+  display: grid;
+  grid-template-columns: 200px 300px 200px;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: end;
+  justify-content: space-between;
+  justify-content: start;
+  grid-template-columns: 1fr 300px 200px; 
+  /* La premiere section occupe tout l'espace restant */
+  grid-template-columns: 1fr 3fr 200px; 
+  /* La deuxieme section occupe trois fois l'espace de la premiere */
+
+  gap: 10px;
+  grid-template-columns: 1fr 3fr; 
+  /* Les deux premières sections sont réparties sur toute la largeur de la page */
+  grid-template-rows:300px 50px ;
+  /* Les éléments de la troisième section débordent verticalement le conteneur */
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+.conteneur section {
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: wheat;
+  padding: .6em;
+}
+

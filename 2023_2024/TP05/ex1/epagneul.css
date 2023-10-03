@@ -58,7 +58,7 @@ list-style-type: none;
 }
 ul li {
   padding-left: 20px; /* Add padding to create space for the image */
-  background-image: url('./images/Epagneul_breton-440px.jpg'); /* Replace 'your-image.png' with your image file path */
+  background-image: url('./images/paw-icon.png'); /* Replace 'your-image.png' with your image file path */
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-position: left center; /* Adjust the position as needed */
   background-size: 16px 16px; /* Set the size of your image */

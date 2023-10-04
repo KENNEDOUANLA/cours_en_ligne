@@ -1,0 +1,25 @@
+.menu ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 15em 15em;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li{
+    width: 15em;
+    background-color: green;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: center;
+}

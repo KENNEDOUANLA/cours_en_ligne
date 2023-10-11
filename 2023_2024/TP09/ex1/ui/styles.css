@@ -1,0 +1,64 @@
+
+@font-face {
+  font-family: 'webfont';
+  src: url('../ui/polices/1942-webfont.woff') format('woff2')
+}
+body {
+    color: rgb(33, 32, 32);
+    max-width: 1200px;
+    background-color:rgba(170, 247, 247, 0.723);
+}
+h2,h1{
+    font-family: 'webfont';
+}
+.banniere{
+    display: flex;
+    background-image: url('./images/plage.jpg');
+    background-repeat: no-repeat;
+}
+.banniere h1{
+    text-align: center;
+    margin: 5px auto;
+}
+.conteneur{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.conteneur ul{
+    list-style-type: none;
+    margin-top: 60px;
+    margin-right: 30px;
+}
+a{
+    color: #bcb9b9;
+    text-decoration: none;
+}
+.menu a{
+text-transform: uppercase;
+}
+.menu li{
+text-transform: uppercase;   
+margin-bottom: 1em;
+}
+.section-image{
+    display: flex;
+}
+
+.section-image img{
+    width: 150px;
+} 
+
+figcaption{
+    text-align: center;
+}
+
+.pied{
+    text-align: center;
+    border: 1px solid #bcb9b9;
+    padding: 6px 0;
+}
+
+.pied a{
+    text-transform: initial;
+}

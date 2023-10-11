@@ -1,0 +1,21 @@
+
+@font-face {
+  font-family: 'Archistico_Bold';
+  src: url('./fonts/Archistico_Bold.woff') format('woff2')
+}
+@font-face {
+  font-family: 'Archistico_Simple';
+  src: url('./fonts/Archistico_Simple.woff') format('woff2')
+}
+@font-face {
+  font-family: 'Know_Your_Product';
+  src: url('./fonts/Know_Your_Product.woff') format('woff2')
+}
+
+h1{
+    font-family: "Know_Your_Product";
+    /* font-size: 3em; */
+}
+p{
+    font-family: "Archistico_Simple";
+}

@@ -1,0 +1,127 @@
+body{
+    max-width: 840px ;
+}
+header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+menu{
+    width: 400px;
+    margin-top: 60px;
+    padding: 0;
+    margin-right: 3em;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article{
+    border: 1px ridge rgb(139, 138, 138);
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 10px 5px rgba(0,0,0,.2); */
+    /* outline: 2px solid rgb(241, 94, 94);
+    outline-offset: 0.5rem;
+    outline-width: 3px; */
+}
+
+article h2{
+    margin: 0;
+    border-bottom: 1px solid rgb(139, 138, 138);
+    margin-bottom: 2px;
+    padding: 16px;
+
+}
+
+article .dinde{
+/* border-top: 1px solid rgb(139, 138, 138); */
+}
+
+h1{
+    font-size: 48px;
+    margin-left: 1em;
+}
+
+menu ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+footer section.partenaire{
+    width: 65%;
+}
+
+footer section ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+
+}
+footer section ul li{
+    margin-left: 22px;
+    width: 80px;
+    text-align: center;
+    padding-top: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% auto;
+}
+#w3c{
+    background-image: url("./img/logoW3C.png");
+}
+#firefox{
+    background-image: url("./img/logoFirefox.png");
+}
+
+#ubuntu{
+ background-image: url("./img/logoUbuntu.png");
+}
+
+#legale{
+    width: 200px;
+    text-align: center;
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 60% auto;
+    background-image: url("./img/logoCC-by-nc-sa.png");
+}
+
+.infos{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.icone{
+    margin: 0 15px ;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    background-size: contain;
+}
+
+.prix{
+background-image: url("./img/iconePrix.png");
+}
+.temps{
+background-image: url("./img/iconeTemps.png");
+}
+.commentaires{
+    background-image: url("./img/iconeCommentaires.png");
+}
+.dinde img{
+   float: inline-start; 
+   padding: 0 15px 0 0;
+}
+.dinde p{
+    padding: 0 15px;
+}

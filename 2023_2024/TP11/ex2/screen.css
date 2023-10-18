@@ -1,0 +1,46 @@
+body{
+    width: 40em;
+}
+p::first-letter{
+    color: green;
+    font-size: x-large;
+}
+h2 + p::first-line{
+    font-style: italic;
+}
+h2:nth-of-type(even) {
+    text-align: left;
+}
+h2:nth-of-type(odd) {
+    text-align: right;
+}
+
+p:first-of-type{
+    font-weight: bold;
+}
+
+h2::after ,h2::before{
+   content: "⁂";
+   color: red;
+ }
+
+p:hover{
+    color: rgb(41, 118, 92);
+}
+
+p:hover em{
+    text-decoration: underline;
+}
+
+p:hover + p{
+    color: rgb(41, 118, 92);
+} 
+
+h2:active{
+    text-align: center;
+    border: 2px solid rgb(41, 118, 92);
+}
+
+h2:not(:hover){
+    text-transform: lowercase;
+}

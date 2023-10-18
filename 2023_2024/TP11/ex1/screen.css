@@ -1,0 +1,140 @@
+body {
+  max-width: 70em;
+  margin: auto;
+  background-color: #102;
+  color: white;
+}
+
+article {
+  border: 1px solid #28B;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+aside {
+  background-color: rgba(45, 67, 39, 0.8);
+  color: white;
+  padding: 1em;
+  margin: 0.5em 2em;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* Ajouter les nouvelles règles ci-dessous */
+
+/* p {
+  text-indent: 3em;
+  text-align: justify;
+  padding: 0 5em;
+  color: #DCF;
+} */
+/* .intro {
+  text-indent: revert;
+  text-align: revert;
+  padding: revert;
+  color: revert;
+} */
+/* article p {
+  text-indent: 3em;
+  text-align: justify;
+  padding: 0 5em;
+  color: #DCF;
+} */
+
+/* Uniquement les p de l'article changent */
+
+article > p {
+  text-indent: 3em;
+  text-align: justify;
+  padding: 0 5em;
+  color: #DCF;
+}
+
+h3 + p {
+  text-align: revert;
+}
+/* 05 */
+/* 07 */
+
+/* :hover {
+  box-shadow: 0.6em 0.2em 1em white;
+  border-radius: 0.5em;
+} */
+/* tous les éléments de la page ont une bordure arrondie et une ombre */
+
+aside:hover {
+  box-shadow: 0.6em 0.2em 1em white;
+  border-radius: 0.5em;
+}
+
+/* Juste les asides 'aside' ont l'effet précédent */
+
+/* aside :hover {
+  box-shadow: 0.6em 0.2em 1em white;
+  border-radius: 0.5em;
+} */
+
+/* Avec l'espace entre le aside et le :hover, l'effet box-shadow s'applique à tous les enfants du aside */
+/* aside:active {
+  text-transform: uppercase;
+} */
+/* en faisant un clic enfoncé, le aside prend le comportement du hover et les caractères du texte passent en majuscules */
+/* le pseudo-classe :active a un effet clic */
+
+aside:active h3 {
+  text-transform: uppercase;
+}
+/* Juste les caractères du h3 changent en majuscules */
+/* le active est sur le aside mais son CSS s'applique sur son h3 */
+
+/* :first-child {
+  border-top: 10px solid forestgreen;
+}
+:last-child {
+  border-right: 10px solid darkred;
+} */
+/* Oui, nous avons le <html /> qui a à la fois une bordure verte en haut et une bordure rouge à droite */
+
+/* :first-of-type {
+  border-left: 10px solid orange;
+}
+:last-of-type {
+  border-bottom: 10px solid lightblue;
+} */
+/* Le même <html /> a les quatre types */
+
+/* article > p:first-child {
+  font-variant: small-caps;
+}  */
+article > p:first-of-type {
+  font-variant: small-caps;
+}
+
+h1::first-letter {
+  color: rebeccapurple;
+  font-size: 200%;
+  vertical-align: middle;
+}
+
+.intro::first-line {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 140%;
+}
+
+aside::after {
+  content: "⁂";
+  display: block;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* 
+Les pseudo-classes sont utilisées pour sélectionner des éléments en fonction de leur état ou de leur position dans la structure du document.
+*/
+
+/* 
+Les pseudo-éléments sont utilisés pour cibler des parties spécifiques de l'élément lui-même, plutôt que de cibler d'autres éléments enfants.
+*/

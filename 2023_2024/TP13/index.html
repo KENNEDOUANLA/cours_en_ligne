@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="LOGINS" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactivité Audio & vidéo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Mon site d'animaux bruyants</h1>
+        <div>Le site qu'il vaut mieux voir qu'entendre</div>
+    </header>
+    <main>
+        <section class="images-list">
+            <figure>
+                <img src="./images/loup.jpg" alt="loup">
+                <audio controls loop src="./sons/loup.wav"></audio>
+                <figcaption>un  cri de loup</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/chat.jpg" alt="chat">
+                <audio controls src="./sons/chatons.ogg"></audio>
+                <figcaption>miaou miaou</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/lion.jpg" alt="lion">
+                <audio controls src="./sons/lion.wav"></audio>
+                <figcaption>royal !!</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/singe.jpg" alt="singe">
+                <audio controls src="./sons/singe.wav"></audio>
+                <figcaption>cheeta</figcaption>
+            </figure>
+        </section>
+        <section>
+            <figure>
+                <video autoplay muted controls src="./videos/chien.mp4" poster="./images/paw-print.png"></video>
+                <!-- Pour qu'une vidéo se lance automatiquement il faut qu'elle soit muted -->
+            </figure>
+            <figure>
+                <video controls src="./videos/chien.webm"></video>
+            </figure>    
+        </section>
+    </main>
+    <footer>
+     <span>Copyright @ etudiants de L& de l.UCN .All right reserved.</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "modern-king";
+    src: url("./fonts/Modern\ King.ttf");
+}
+body{
+    background-image: url('./images/mysterious-circus-actress-holding-two-little-doves-on-her-hands-in-smoke.jpg'); 
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(80px);
+    margin: 0;
+    background-attachment: fixed;
+    font-family: "modern-king";
+}
+
+header nav{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.626);
+    height: 60px;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-family: initial;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+}
+main{
+    color:orange;
+    padding: 1em 3em;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+.images-section{
+ /* gap: 2em; */
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ margin: 4em 0;
+}
+
+.image-container{
+    width: 400px;
+}
+.image-container img{
+    width: 100%;
+}
+.description-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description-section p{
+    width: 85%;
+    font-size: large;
+}
+.logo{
+    width: 200px;
+    height: 100%;
+    background-image: url("./images/logo3.png");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+
+footer{
+    border-top: 1px solid rgba(255, 255, 255, 0.626);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}

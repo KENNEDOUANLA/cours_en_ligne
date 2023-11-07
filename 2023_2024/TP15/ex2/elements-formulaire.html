@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="LOGINS" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h2>Un premier formulaire</h2>
+        <form method="POST" action="https://ensweb.users.info.unicaen.fr/TW1/tp/decouverte-formulaires/enonce/recup.php">
+            <fieldset>
+                <legend>Saisie des identifiants</legend>
+                <label>
+                    Votre pseudo (oblifatoire ,10 caractères max):
+                    <input type="text" name="pseudo" required maxlength="10">
+                </label><br>
+                <label>
+                    Mot de passe (12 caractères minimum) : 
+                    <input type="password" name="pass" required minlength="12">
+                </label>
+            </fieldset><br><br>
+            <fieldset>
+                <legend>Quelques renseignements sur vous</legend>
+                <label>
+                    Votre email 
+                    <input type="email" name="adresse-email">
+                </label><br>
+                <label>
+                    L'adresse de votre page web personnel (ou de votre instagram , twitter ,facebook...),ou d'une page que vous aimez bien :
+                    <input type="text" name="lien" placeholder="https://example.com" minlength="50">
+                </label><br>
+                <label>
+                    Votre téléphone personnel(10 chiffres sans espaces) 
+                    <input type="tel" name="telephone" placeholder="0612345678" maxlength="10" minlength="10">
+                </label>
+            </fieldset><br><br>
+            <fieldset>
+                <legend>Quelques statistiques</legend>
+                <label>
+                    Votre département de naissance (100 si pas en France):
+                    <input type="number" name="departement" value="14" max="100" min="1">
+                </label><br>
+
+                <label>
+                    Comment estimez-vous votre niveau en informatique ? <br>
+                    Pas top<input type="range" name="niveau-info" max="10" min="0" > Très bon
+                </label><br>
+                <label>
+                    Date de naissance :<input type="date" name="naissance">
+                </label><br>
+                <label>
+                    Votre couleur préférée :<input type="color" name="couleur">
+                </label><br><br>
+                <fieldset>
+                    <legend>Cochez les sports que vous avez déjà pratiqués</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="badminton">badminton</label> </li>
+                        <li><label><input type="checkbox" name="tennis">tennis</label> </li>
+                        <li><label><input type="checkbox" name="volley">volley</label> </li>
+                        <li><label><input type="checkbox" name="football">football</label> </li>
+                        <li><label><input type="checkbox" name="handball">handball</label> </li>
+                        <li><label><input type="checkbox" name="rugby">rugby</label> </li>
+                    </ul>
+                    
+                </fieldset><br>
+
+                <label>
+                    Votre pays d'origine :
+                    <select name="pays" >
+                    <option value="GBR" >Angleterre</option>
+                    <option value="CN" >Chine</option>
+                    <option value="FR" selected>France</option>
+                    <option value="GT" >Guinée</option>
+                    <option value="MA" >Maroc</option>
+                    <option value="europe">Autre pays européen</option>
+                    <option value="monde">Autre pays hors Europe</option>
+                    </select>
+                </label>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Vos études</legend>
+                <fieldset>
+                    <legend>Votre baccalauréat</legend>
+                        <input type="radio" name="bac" value="general" checked>bac général
+                        <input type="radio" name="bac" value="pro">bac pro 
+                        <input type="radio" name="bac" value="techno">bac techno
+                        <input type="radio" name="bac" value="autre">autre
+                </fieldset>
+                <br>
+                
+                <label for="">
+                    Votre inscription cette année : 
+                    <select name="inscription">
+                        <optgroup label="Informatique">
+                            <option value="L1I">L1 info</option>
+                            <option value="L1a">L1 info parcours adapté</option>
+                            <option value="LAS">LAS info</option>
+                        </optgroup>
+                        <optgroup label="Maths">
+                            <option value="L1M">L1 maths</option>
+                            <option value="C">CUPGE</option>
+                        </optgroup>
+                    </select>
+                </label><br><br>
+                <label for="">
+                    Vous pouvez laisser un paragraphe sur vos motivations:
+                <br>
+                    <textarea placeholder="pourquoi ce choix, quelles motivations ?" name="motivations"  cols="60" rows="6"></textarea>
+                </label>        
+            </fieldset>
+
+
+            <input type="submit" value="Soumettre les informations">
+        </form>
+    </main>
+    <footer></footer>
+
+</body>
+</html>

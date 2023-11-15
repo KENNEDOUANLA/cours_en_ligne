@@ -1,0 +1,29 @@
+.menu ul{
+  list-style-type: none;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 1s ,color 1s,font-size 2s;
+  width: fit-content;
+}
+
+.menu a:hover {
+  transform: translateX(20px) rotate(360deg);
+  color: #ff5733;
+}
+
+.menu a:focus {
+  outline: none;
+  transform: scale(2);
+  transition: transform 1s;
+
+}

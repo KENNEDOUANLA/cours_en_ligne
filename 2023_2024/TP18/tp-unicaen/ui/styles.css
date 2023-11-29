@@ -1,0 +1,344 @@
+/** fonts **/
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("fonts/Ubuntu/Ubuntu-Regular.ttf")
+    format("truetype");
+    font-style: normal;
+    font-weight: normal; }
+
+@font-face {
+    font-family: "Raleway";
+    src: url("fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+:root{
+    --coul-gris-clair: #F1F1F1;
+    --coul-gris-moyen: #E4E4E4;
+    --coul-gris-fonce: #707070;
+    --coul-gris-dark: #555;
+    --coul-gris-transparent: #575757b3;
+    --coul-secondaire-site: #519D9E;
+    --coul-actus: #484848;
+    --largeur-base: 1200px;
+}
+
+body{
+    margin: 0;
+    background-color: #f5F5F5;
+}
+header{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.logos img{
+    height: 128px;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul{
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li{
+    font-family: "Raleway";
+    width: 200px;
+    height: 20px;
+    border: 1px solid var(--coul-gris-fonce);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--coul-gris-fonce);
+}
+.container-bg{
+    background-image: url("./images/img_fond_accueil.jpg");
+    background-size: 100% 480px;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-bg .menu{
+    display: grid;
+    gap: 115px;
+    grid-template-columns:1fr 1fr;
+    margin: auto;
+}
+.container .menu div{
+    border: 6px solid var(--coul-gris-clair);
+    background-color: var(--coul-gris-transparent);
+    width: 350px;
+    letter-spacing: 0.03em;
+    line-height: 35px;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.la_une{
+    background-color: var(--coul-gris-clair);
+    font-family: "Raleway";
+}
+.la_une ul{
+    width: var(--largeur-base);
+    justify-content: space-between;
+}
+.la_une ul li{
+    background-color: var(--coul-secondaire-site);
+    padding: 40px 10px;
+
+    
+}
+.la_une ul li a{
+    text-decoration: none;
+        color: white;
+}
+
+.actual-agenda{
+    width: 1200px;
+    background-color: white;
+    display: grid; 
+    grid-template-columns: 3fr 1fr;
+    margin: auto;
+}
+/* .actual-agenda::before{
+    content: url("./images/fond-hachure.png");
+    background-image: url("./images/fond-hachure.png");
+    background-size: cover;
+    height: 100%;
+} */
+
+.actual-agenda h2{
+    font-family: "Raleway";
+    letter-spacing: 0.05em;
+    line-height: 1.4em;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-top: 4px solid;
+    width: fit-content;
+}
+
+.more{
+    margin: 15px 0;
+    border: 1px solid var(--coul-gris-fonce);
+    padding: 5px 15px;
+    width: fit-content;
+    margin-left: auto;
+}
+.more a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.agenda{
+    padding: 0px 10px;
+}
+.list-agenda h4{
+    color: var(--coul-secondaire-site);
+}
+.list-agenda .item{
+    border-bottom:1px solid var(--coul-gris-fonce);
+
+}
+.list-agenda .item:last-child{
+    border-bottom:0;
+}
+figure{
+    margin: 0;
+}
+.list-agenda figure img{
+    width: 100%;
+}
+.list-agenda figcaption{
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--coul-actus);
+}
+.actual{
+    width: 880px;
+}
+.list{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.list .item{
+    background-color: var(--coul-gris-moyen);
+    color: var(--coul-actus);
+    padding: 10px;
+}
+
+h3{
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.05px;
+}
+/* var(--coul-gris-fonce); */
+
+footer{    
+    background-color: black; 
+    justify-content: center;
+    display: flex;
+}
+footer li{
+    width: fit-content;
+    padding: 0 30px ;
+    border-left:1px solid white ;
+}
+footer li:first-child{
+    border-left:0 ;
+}
+
+.sm-up{
+    display: none;
+}
+.bottom{
+    background-color: var(--coul-gris-fonce);
+}
+.bottom a{
+    text-decoration: underline;
+}
+
+.bottom ul{
+    display: block;
+}
+.bottom{
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px ;
+}
+.bottom .item{
+    border-left: 1px solid white;
+    margin-bottom: 1em;
+}
+.bottom .item:first-child{
+    border-left: 0;
+}
+.bottom figure{
+    width: 100px;
+    margin-right: 2em;
+    
+}
+.bottom li{
+    margin-bottom: 10px;
+}
+.c-white{
+    color: white;
+}
+/* --coul-gris-fonce */
+/* responsive */
+.d-flex{
+    display: flex;
+}
+@media screen and (max-width:1650px) {
+    nav ul{
+    padding-right: 10px;
+    }
+}
+
+@media screen and (max-width:1470px) {
+    .logos img{
+        height:100px;
+    }
+    nav ul li{
+        width: 150px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .sm-up{
+        display: block;
+        height: 50px;
+    }
+
+    .sm-down{
+        display: none;
+    }
+
+    .container-bg .menu{
+        display: grid;
+        gap: 5%;
+        grid-template-columns:1fr 1fr;
+    }
+    .la_une ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .la_une ul li{
+        width: 640px;
+        padding: 10px;
+        margin-bottom: 2em;
+    }
+
+    .actual-agenda{
+        width: 880px;
+        display: grid; 
+        grid-template-columns: 1fr;
+    }
+
+    .la_une ul{
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width:1000px) {
+
+    .bottom{
+        display: block;
+    }
+
+    .bottom .item{
+    border-bottom: 1px solid white;
+    border-left: 0;
+    }
+
+    .bottom .item:last-child{
+        border-bottom: 0;
+    }
+    .bottom figure{
+    
+        margin:0px 2em;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .actual .list{
+        width: 690px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .container-bg .menu{
+        grid-template-columns:1fr;
+    }
+
+    .container-bg .menu div{
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width:630px) {
+
+    .actual .list{
+        width: 70vw;
+        grid-template-columns: 1fr;
+    }
+}
+
+

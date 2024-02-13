@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript et Document Object Model</title>
+    <meta name="author" content="XXX">
+    <style>
+        section {
+            padding: 15px;
+            border: 1px solid #aaaaaa;
+            margin: 10px;
+        }
+        .important {
+            color: blue;
+            font-style: italic;
+        }
+
+        .nouvelle {
+            color: green;
+        }
+    </style>
+    <script src="https://ensweb.users.info.unicaen.fr/TW2/03/tests-etu.js" defer></script>
+
+    
+
+</head>
+<body>
+    <h1 class="debut">Javascript et Document Object Model</h1>
+
+    <section id="partie1">
+        <h2 class="debut">Partie 1 obtenir des infos</h2>
+
+        <p>Un document HTML est modélisé par un <em>arbre</em> appelé DOM.</p>
+
+        <ul class="debut" id="liste1">
+            <li>Item 1 <em>qui est le premier</em></li>
+            <li>Item 2</li>
+            <li>Item 3 <em>le dernier</em></li>
+        </ul>
+        <figure>
+            <img src="zengarden.jpg" alt="Une image de CSS Zen Garden" width="150" >
+            <figcaption>Une première image</figcaption>
+        </figure>
+        <div id="div1">
+            <p>un paragraphe dans une division</p>
+            <p>un autre paragraphe dans une division</p>
+            <p>encore un autre paragraphe dans une division</p>
+            <p>un dernier paragraphe dans une division</p>
+        </div>
+    </section>
+
+    <section id="partie2">
+        <h2>Partie 2 modifier un élément</h2>
+        <p>Un premier paragraphe qui va disparaitre</p>
+        <p id="paragraphe">Un paragraphe avec son identifiant</p>
+        <figure>
+            <img src="zengarden.jpg" alt="Une image de CSS Zen Garden" width="150" >
+            <figcaption  class="exo-dom">Une image avec une légende</figcaption>
+        </figure>
+        <ul class="uneliste">
+            <li>un item</li>
+            <li>un autre item</li>
+            <li>dernier item</li>
+        </ul>
+    </section>
+
+    <section id="partie3">
+        <h2 class="exo-dom important">Partie 3 modifier des éléments</h2>
+        <p>Un paragraphe de la partie 3</p>
+        <div>
+            <h2>Titre dans une division</h2>
+            <p class="exo-dom important">Un paragraphe appartenant à 2 classes CSS au départ.</p>
+            <p>Un autre texte de la div.</p>
+            <figure>
+                <img src="zengarden.jpg" alt="Une image de CSS Zen Garden" width="150" >
+                <figcaption  class="exo-dom">Une image avec une légende</figcaption>
+            </figure>
+            <p class="exo-dom important">Un dernier texte de la div.</p>
+        </div>
+        <h2 class="exo-dom important">Encore un titre</h2>
+        <ul>
+            <li>un item</li>
+            <li>un autre item</li>
+            <li class="exo-dom">dernier item</li>
+        </ul>
+
+        <p id="gras" class="exo-dom important">mot <strong>gras</strong> mot <strong>gras</strong> mot <strong>gras</strong> mot <strong>gras</strong>
+            mot <strong>gras</strong> mot <strong>gras</strong> mot <strong>gras</strong> mot <strong>gras</strong></p>
+
+        <ol>
+            <li class="exo-dom">le premier</li>
+            <li>le second</li>
+            <li class="exo-dom">le trois</li>
+        </ol>
+
+    </section>
+
+    <section id="partie4">
+        <h2>Partis 4 Créer des élements avec le DOM</h2>
+
+        <ul>
+            <li>Une liste qu'on va dupliquer</li>
+            <li>en utilisant le clonage</li>
+            <li>vérifier que cette liste-ci est toujours présente ici après</li>
+        </ul>
+
+        <ol id="listeEnPlus">
+            <li>un item</li>
+            <li>un autre</li>
+        </ol>
+
+        <div id="lafin">la division lafin</div>
+    </section>
+
+
+
+</body>
+<script src="dom.js"></script>
+</html>

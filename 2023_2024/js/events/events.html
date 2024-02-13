@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Une page pour tester les évènements</title>
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        section:first-child {
+            border-right: 1px solid grey;
+            padding-right: 10px;
+        }
+        #sable {
+            width: 312px;
+            padding: 5px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #sable figcaption {
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .dark {
+            background-color: #DDDDDD;
+        }
+    </style>
+    <script src="https://ensweb.users.info.unicaen.fr/TW2/05/tests-etu.js" defer></script>
+    <script src="events.js"></script>
+</head>
+<body>
+<div id="divTests"><button id="launchTests">Lancer les tests sur la page</button></div>
+<div id="conteneur">
+<h1 class="dark">Une page pour cliquer partout</h1>
+<main>
+    <section>
+    <p id="question1">Q1 : Cliquer ici change la couleur du titre h1.</p>
+
+    <p id="question2-3">Q2-3 : Un paragraphe qui capte l'entrée de la souris<br>
+    et capte aussi sa sortie.</p>
+
+    <p id="question4">Q4 : Cliquer ici change l'image du chateau de sable.</p>
+
+    <p id="question5" class="dark">Q5 : Cliquer ici change l'image du chateau de sable en alternant entre les 2 images fournies (ça change donc à chaque fois qu'on clique)</p>
+
+    <p id="question6">Q6 : Cliquer ici cache/montre le paragraphe <code>para</code></p>
+
+    <p id="question8">Q8 : Cliquer ici ajoute un item à la fin de la liste <code>liste</code></p>
+
+    <p id="question9">Q9 : Cliquer ici ajoute au paragraphe <code>para</code> un capteur de double clic</p>
+
+    <p id="question10">Q10 : Cliquer ici enlève au paragraphe <code>para</code> son capteur de double clic</p>
+
+    <p id="question11" class="dark">
+        <button>Q11a</button>
+        <button>Q11b</button>
+        <button>Q11c</button>
+        Ces 3 boutons font la même chose : supprimer le dernier élément de la liste
+    </p>
+
+    <p id="question12" class="dark">Q12 : Cliquer ici ajoute le capteur d'évènement clic à tous les éléments de la classe <code>dark</code> (par defaut ils ont un fond gris clair)
+    et l'élément alors cliqué sera mis en blanc sur fond noir.</p>
+
+    <p id="question13">Q13 : Cliquer ici ajoute N paragraphes en fin de page</p>
+    </section>
+
+    <section>
+
+    <figure id="sable">
+        <figcaption class="dark">
+            <div class="legende">Château de sable</div>
+            <div class="licence">Licence CC-by, source: inconnue</div>
+        </figcaption>
+        <img src="images/chateau_sable_debutant.jpg" alt="château de sable de débutant">
+    </figure>
+
+        <p id="para" class="dark">Un paragraphe <em>avec du texte qui ne dit rien</em> de plus que ce qu'il dit. <strong>Un
+            paragraphe avec du texte</strong> qui ne dit rien de plus que ce qu'il dit. Un <em>paragraphe avec du texte
+            qui ne dit rien</em> de plus que ce qu'il dit. Un <strong>paragraphe avec du texte qui ne dit rien</strong>
+            de plus que ce
+            qu'il dit. Un paragraphe avec du texte qui <em>ne dit rien de plus que ce qu'il dit</em>. Un paragraphe avec du
+            texte qui ne dit <strong>rien de plus que ce qu'il dit</strong>. Un paragraphe avec du texte qui ne dit rien de plus
+            que ce qu'il dit. <em>Un paragraphe avec du texte qui ne dit rien de plus</em> que ce qu'il dit.</p>
+
+    <ul id="liste">
+        <li class="dark">Un premier item de liste</li>
+        <li class="dark">Un deuxième avec un <a href="https://google.com" id="question7">lien vers Google</a> qui sera bloqué</li>
+        <li>Un troisième item avec un <a href="http://lemonde.fr">lien vers Le Monde</a></li>
+    </ul>
+
+    </section>
+</main>
+</div>
+
+<script>
+    "use strict";
+    // NE PAS TOUCHER CES 2 LIGNES !!
+    let initTests = true;
+    let bodyClone = document.getElementById('conteneur').cloneNode(true);
+
+    // fonction init à compléter dans events.js
+    init();
+</script>
+
+</body>
+</html>

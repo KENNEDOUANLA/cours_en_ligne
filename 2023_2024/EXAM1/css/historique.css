@@ -1,0 +1,66 @@
+.history-body .container{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr
+}
+.block-image-people{
+    background-image: url("../images/histoire/3187ffab101b93e4d8d03f30d029bbdb.jpg");
+    
+}
+.block-image-time{
+    background-image: url("../images/histoire/7c74306c81886e006a5b6638957841ce.jpg");
+}
+.block-image-conflit{
+    background-image: url("../images/histoire/74ed71c612a74329775fecfe216b7c71.jpg");
+}
+.block-image-lieux{
+    background-image: url("../images/histoire/ef4c06f5be4a6a2c9671e199af3e00d7.jpg");
+}
+.block-image-event{
+    background-image: url("../images/histoire/356406af0e6b9da087999d2beef3501f.jpg");
+}
+.description{
+    transition:all 1.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    opacity: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.block-image:hover .description{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+.block-image:hover{
+    transform: translateY(20px) scale(1.02);
+    background-size: cover;
+}
+.block-image .texte{
+    padding: 5px;
+    background-color: #192023;
+}
+
+.block-image h3{
+    color:#e4e4e4;
+    padding-left: 15px;
+    font-size: 30px;
+}
+.block-image{
+    max-width: 450px;
+    min-height: 320px;
+    max-height: 450px;
+    padding: 5px 0 0;
+    color:#cdcccc;
+    cursor: pointer;
+    position: relative;
+    transition:all 1s ease-in-out;
+    background-color: #192023;
+    padding: 15px;
+    background-size: 95% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

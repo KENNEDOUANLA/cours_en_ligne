@@ -1,0 +1,14 @@
+Préliminaire : faire fonctionner le script
+
+Démarrage : le code qui prend l'élément d'identifiant paragraphe et l'affiche en console est déjà écrit dans le fichier dom.js. Mais ça affiche null au lieu de l'élément <p>.
+Pourquoi cela ne marche-t-il pas ?
+Cela se produit parce que, à ce stade(avec le dom.js au debut de la page), l'élément <p> n'est pas encore présent dans le DOM.
+
+
+Déplacer la balise <script src="dom.js"></script> et la placer en fin de body. Attention, il faut la mettre avant la fermeture </body> sinon votre page ne sera plus valide.
+Tester à nouveau. Pourquoi cela marche-t-il maintenant ?
+
+Cela se produit parce que, à ce stade(avec le dom.js a la fin de page), l'élément <p> est déjà présent dans le DOM.
+
+
+Partie 1 : obtenir des données de l'arbre DOM

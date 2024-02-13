@@ -1,0 +1,74 @@
+.explore-body p:hover{
+    color: #DFB657;
+}
+.explore-body .container{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.block-image-art{
+    background-image: url("../images/explorations/gettyimages-1155878499.webp");
+}
+.block-image-langue{
+    background-image: url("../images/explorations/mesopotamia-gettyimages-152200992.webp");
+}
+.block-image-civilisation{
+    background-image: url("../images/explorations/a-detail-from-the-so.webp");
+    
+}
+.block-image-about{
+background-image: url("../images/explorations/34d4de2d35b57ee32195824a99c0721a.jpg");
+}
+.block-image-culture{
+    background-image: url("../images/explorations/mesopotamia-gettyimages-629566459.webp");
+
+}
+.block-image-science{
+    background-image: url("../images/explorations/sumer-gettyimages-640271361.webp");
+
+}
+.block-image h3{
+    color:#e4e4e4;
+    padding-left: 15px;
+    font-size: 30px;
+}
+.description{
+    transition:all 1.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    opacity: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.block-image:hover .description{
+    opacity: 0.9;
+    transform:translateX(15px);
+}
+.block-image:hover{
+    transform: translateY(20px) scale(1.02);
+    background-size: cover;
+}
+.block-image .texte{
+    padding: 5px;
+    background-color: #262f33;
+}
+.block-image{
+    max-width: 450px;
+    min-height: 320px;
+    max-height: 450px;
+    padding: 5px 0 0;
+    color:#cdcccc;
+    cursor: pointer;
+    position: relative;
+    transition:all 1s ease-in-out;
+    background-color: #333e43;
+    padding: 15px;
+    background-size: 95% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,85 @@
+@media screen and (max-width:1000px) {
+    .block-image{
+        width: 330px;
+        height: 330px;
+    }
+    .image-container{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .block-image{
+        width: 300px;
+        height: 300px;
+    }
+    .images-section{
+        grid-template-columns: 1fr;
+    }
+    .image-container{
+        max-width: 400px;
+    }
+    .history-body .container,.explore-body .containere{
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .block-image{
+        width: 260px;
+        height: 260px;
+    }
+    .explore-body .containere{
+        grid-template-columns: 1fr
+    }
+    form{
+        max-width: 400px;
+    }
+    form:hover{
+        transform:scale(1.001) translateY(5px);
+    }
+    header a{
+        font-size: 12px;
+    }
+    .logo{
+        width: 130px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: large;
+    }
+}
+@media screen and (max-width:600px) {
+    
+    form{
+        max-width: 360px;
+    }
+    form:hover{
+        transform:scale(1.001) translateY(5px);
+    }
+    header a{
+        font-size: 8px;
+    }
+    .logo{
+        width: 100px;
+    }
+    h1{
+        font-size: 32px;
+    }
+    p{
+        font-size: small !important;
+    }
+}
+
+/* font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot;
+font-family: quot;Times New Romanquot; */

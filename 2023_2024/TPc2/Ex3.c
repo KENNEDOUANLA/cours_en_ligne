@@ -41,3 +41,22 @@ int main() {
 
     return 0;
 }
+int decompte_jours(int jour_depart, int nombre_journees) {
+    for (int i = 0; i < nombre_journees; i++) {
+        printf("J moins %d ! ", i + 1);
+
+        if (jour_suivant(jour_depart + i + 1) == samedi) {
+            printf("C'est le week-end.\n");
+        } else if (jour_suivant(jour_depart + i + 1) == lundi) {
+            printf("C'est une nouvelle semaine qui commence.\n");
+        } else {
+            printf("\n");
+        }
+    }
+
+    printf("Jour J !\n");
+    return jour_suivant(jour_depart + nombre_journees);
+}
+int jour_suivant(int jour_actuel) {
+    return (jour_actuel + 1) % nombre_jours;
+}

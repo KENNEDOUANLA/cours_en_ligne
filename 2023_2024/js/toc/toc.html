@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le DOM pour créer une table des matières</title>
+    <script src="toc.js" ></script>
+    <style>
+        main > section {
+            border-bottom: 1px solid black;
+        }
+        main > section > section, main section p {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>TW1 : Technologies Web 1</h1>
+
+<nav id="table-matieres">
+</nav>
+
+<main>
+    <section>
+        <h2>Présentation</h2>
+        <p>Le cours est présenté par Alexandre Niveau et se déroule sur 10 semaines.</p>
+    </section>
+    <section>
+        <h2>Web et HTML</h2>
+        <section>
+            <h3>Le web, c’est quoi et comment ça marche ?</h3>
+            <p>Rappels sur Internet<br>
+                Le World Wide Web : définition et principes de base<br>
+                Les constituants principaux du web : HTTP, URL, HTML</p>
+        </section>
+        <section>
+            <h3>HTML : la base du web</h3>
+            <section><strong>Nota :</strong> cette section risque de faire planter votre programme, il ne faut pas la prendre en compte pour la table des matières.</section>
+            <p>Balisage et structure de documents<br>
+                Les règles de HTML<br>
+                Notions d’hypertexte<br>
+                Notions d’accessibilité<br>
+                Les éléments de structuration d’HTML5</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Modifier le style des pages : CSS</h2>
+        <section>
+            <h3>Introduction à CSS</h3>
+            <p>Propriétés de style<br>
+                Règles CSS<br>
+                Intérêt des feuilles de style<br>
+                Cascade et héritage<br>
+                Classes et identifiants<br>
+                Groupes et combinaison de sélecteurs</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Mise en page CSS</h2>
+        <section>
+            <h3>Modèle de boîte CSS3</h3>
+            <p>Visual formatting model de HTML/CSS<br>
+                Propriétés de base des boîtes<br>
+                Quelques propriétés CSS3<br>
+                Alignement de contenu</p>
+        </section>
+
+        <section>
+            <h3>Bases de la mise en page avec CSS</h3>
+            <p>Propriété display<br>
+                Positionnement absolu et relatif<br>
+                Mise en page classique et moderne</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Images sur le web et bonnes pratiques CSS</h2>
+        <section>
+            <h3>Images sur le web (HTML/CSS)</h3>
+            <p>Formats d’image pour le web<br>
+                L’élément img et quelques-uns de ses attributs<br>
+                Propriétés de base des backgrounds en CSS<br>
+                Remplacement d’images</p>
+        </section>
+        <section>
+            <h3>Précisions sur les sélecteurs et bonnes pratiques CSS</h3>
+            <p>Utiliser divers sélecteurs ensemble<br>
+                Utiliser identifiants et classes<br>
+                Spécificité des sélecteurs<br>
+                Structuration des fichiers CSS</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Sélecteurs avancés — Polices sur le web</h2>
+        <section>
+            <h3>Sélecteurs avancés</h3>
+            <p>Sélecteurs de descendance et d’adjacence<br>
+                Pseudo-classes<br>
+                Pseudo-éléments<br>
+                Interactivité avec CSS : topo sur les menus déroulants</p>
+        </section>
+
+        <section>
+            <h3>Bases de l’utilisation de polices sur le web</h3>
+            <p>Polices du système et font stack<br>
+                Utiliser n’importe quelle police avec @font-face</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Design adaptatif — Transitions et transformations CSS</h2>
+        <section>
+            <h3>Outils CSS de base pour le design adaptatif</h3>
+            <p>media queries<br>
+                viewport<br>
+                Propriétés utiles pour l’adaptatif<br>
+                Unités de distance dynamiques</p>
+        </section>
+        <section>
+            <h3>Transitions, transformations, animations</h3>
+            <p>Animer les transitions entre valeurs d’une propriété<br>
+                Transformations<br>
+                Un mot sur les animations non transitionnelles</p>
+        </section>
+    </section>
+</main>
+
+<script>
+    faireTable();
+    addTopList()
+</script>
+</body>
+</html>

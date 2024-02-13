@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Un tableau créé par le DOM</title>
+  <script src="data.js"></script>
+  <script src="table.js"></script>
+
+  <style>
+    body {
+      padding: 20px;
+    }
+    table {
+      margin: 20px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    thead, th:first-child {
+      background: lightgrey;
+    }
+    th {
+      text-transform: capitalize;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      min-width: 60px;
+      text-align: center;
+    }
+    .more {
+      background: lightgreen;
+    }
+    .less {
+      background: lightcoral;
+    }
+  </style>
+</head>
+<body>
+<h1>Un tableau créé par le DOM</h1>
+
+<div id="conteneur"></div>
+
+<script>
+"use strict";
+// pour commencer on affichera seulement les infos de la 1ère personne :
+// afficher(data[0]);
+
+// puis ensuite on affichera toutes les personnes :
+afficherTous(data);
+</script>
+</body>
+</html>

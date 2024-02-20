@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaires et Javascript</title>
+
+    <style>
+        .erreur {
+            color: red;
+            display: block;
+        }
+        form {
+            margin: 20px;
+        }
+        form div {
+            margin: 10px;
+        }
+    </style>
+    <script src="forms.js"></script>
+</head>
+<body>
+    <h1>Formulaires et Javascript</h1>
+
+    <form action="https://ensweb.users.info.unicaen.fr/tp-jml/js-forms/form.php"  method="post" id="formulaire">
+        <div>
+            <label>Prénom :
+                <input type="text" name="prenom" id="prenom" value="" placeholder="Prénom"/>
+                <span class="erreur" id="erreur-prenom"></span>
+            </label>
+        </div>
+        <div>
+            <label>Date de naissance (jj/mm/aaaa) :
+                <input type="text" name="jour" id="jour" value="" placeholder="Jour" size="2"/> /
+                <input type="text" name="mois" id="mois" value="" placeholder="Mois" size="2"/> /
+                <input type="text" name="annee" id="annee" value="" placeholder="Année" size="4"/>
+                <span class="erreur" id="erreur-naissance"></span>
+            </label>
+        </div>
+        <div>
+            <input type="submit" name="valider" value="Envoyer" />
+        </div>
+    </form>
+
+<script>
+    "use strict";
+    // initialiser l'application
+    init();
+</script>
+</body>
+</html>

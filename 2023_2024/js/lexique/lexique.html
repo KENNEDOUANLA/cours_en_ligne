@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Lexique et DOM</title>
+<style type="text/css">
+#lexique {
+    float: right;
+    width: 300px;
+    background-color: #aabbcc;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#lexique h2 {
+    margin-top: 0px;
+    text-align: center;
+}
+abbr {
+    cursor: help;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+<script type="text/javascript" src="lexiqueInfo.js"></script>
+<script type="text/javascript" src="lexique.js"></script>
+
+</head>
+<body>
+<div id="lexique">
+    <h2>Lexique</h2>
+    
+</div>
+
+<div id="contenu">
+<h1>Le W3C</h1>
+
+
+<p>Le <abbr title="World Wide Web Consortium">W3C</abbr> est un consortium créé au mois d'octobre 1994 par Tim Berners-Lee pour promouvoir la compatibilité et donc la normalisation des technologies du World Wide Web. Avant le <abbr title="World Wide Web Consortium">W3C</abbr>, c'était l'<abbr title="Internet Engineering Task Force">IETF</abbr> (un autre organisme important de l'Internet) qui était en charge de cette mission.</p>
+<p>Le <abbr title="World Wide Web Consortium">W3C</abbr> a par exemple standardisé les technologies <abbr title="HyperText Markup Language">HTML</abbr> et <abbr title="eXtensible Markup Language">XML</abbr>.</p>
+</div>
+
+<script>
+    // initialiser les capteurs d'évènements ici
+    // et écrire les fonctions callback dans lexique.js
+"use strict";
+    document.querySelectorAll("abbr").forEach((abbr)=>{
+        abbr.addEventListener("click",expliquer)
+    })
+    let resetbutton = document.createElement("button");
+    resetbutton.style.display = "none";
+    resetbutton.textContent="Effacer";
+    let lexiqueItems = document.getElementById("lexique");
+    lexiqueItems.appendChild(resetbutton);
+    resetbutton.addEventListener("click",reset);
+</script>
+
+</body>
+</html>

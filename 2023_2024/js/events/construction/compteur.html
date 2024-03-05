@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de devis</title>
+    <meta charset="UTF-8" />
+    <style>
+        #categories li {
+            cursor: pointer;
+        }
+
+        #selection {
+            display: grid;
+            grid-template-columns: 500px auto;
+            grid-gap: 20px;
+        }
+
+        button, fieldset div, select {
+            margin: 10px 30px 0 10px;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+
+        th:first-child, td:first-child {
+            width: 30%;
+        }
+
+        td:not(:first-child) {
+            text-align: center;
+        }
+
+        tr:last-child th {
+            background-color: #DDDDDD;
+        }
+
+        #save {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script src="categories.js"></script>
+    <script src="prix.js"></script>
+    <script src="devis.js"></script>
+
+</head>
+<body>
+<h1>Générateur de devis travaux</h1>
+<div id="conteneur">
+    <form id="selection">
+        <fieldset id="categories">
+            <legend>Choisir la catégorie</legend>
+        </fieldset>
+        <fieldset>
+            <legend>Composition</legend>
+            <select name="tache"  id="select-taches">
+                <option value="none">Sélectionner une tâche</option>
+            </select>
+            <div><label>Quantité <input type="text" name="quantite"></label></div>
+            <div>TVA <label><input type="radio" name="tva" value="5.5"> 5.5%</label> - <label><input type="radio" name="tva" value="10" checked> 10%</label> - <label><input type="radio" name="tva" value="20"> 20%</label></div>
+            <button type="submit">Ajouter</button><button type="reset" id="effacer">Recommencer</button>
+        </fieldset>
+    </form>
+    <section>
+        <h2>Mon devis</h2>
+        <div id="devis"></div>
+
+        <form id="save">
+            <fieldset>
+                <legend>Enregistrer</legend>
+                <label>Nom du client : <input name="client" id="client" value=""></label>
+                <label>Intitulé : <input name="intitule" id="intitule" value=""></label>
+                <button>Enregistrer</button>
+            </fieldset>
+        </form>
+
+    </section>
+</div>
+
+<div id="mes-devis">
+    <h2>Mes devis enregistrés</h2>
+
+</div>
+
+<script>
+"use strict";
+    init();
+</script>
+</body>
+</html>

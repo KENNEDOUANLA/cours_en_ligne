@@ -170,17 +170,18 @@ function afficheListeDevis(liste){
     liste.forEach((devis,index) => {
         let li = document.createElement('li');
         li.textContent = devis.client + " - " + devis.intitule;
-        var button = document.createElement('button');
-        button.type = "button";
-        button.textContent="Supprimer"
-        button.dataset.idDevis = index
-        li.appendChild(button);
-        var button = document.createElement('button');
-        button.type = "button";
-        button.textContent="Exporter"
-        button.dataset.idDevis=index
-        button.addEventListener("click", exportHtml);
-        li.appendChild(button);
+        var Supprimer = document.createElement('button');
+        Supprimer.type = "button";
+        Supprimer.textContent="Supprimer"
+        Supprimer.dataset.idDevis = index
+        li.appendChild(Supprimer);
+        Supprimer.addEventListener("click", supprimeDevis);
+        var Exporter = document.createElement('button');
+        Exporter.type = "button";
+        Exporter.textContent="Exporter"
+        Exporter.dataset.idDevis=index
+        Exporter.addEventListener("click", exportHtml);
+        li.appendChild(Exporter);
         ul.appendChild(li);
     });
 }
@@ -222,7 +223,7 @@ function exportHtml()
     <div>
         <h1>Votre devis</h1>
         <b>${devisInfos.client} - ${devisInfos.intitule}</b>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>Désignation</th>

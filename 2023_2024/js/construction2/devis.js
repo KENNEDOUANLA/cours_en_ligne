@@ -75,7 +75,7 @@ function afficheDevis(liste)
     table.appendChild(thead);
     table.appendChild(tbody);
     table.appendChild(tfoot);
-    document.getElementById("mes-devis").appendChild(table);
+    document.getElementById("devis").appendChild(table);
 }
 
 function init() {
@@ -97,7 +97,7 @@ function ajouter(e)
     var tauxTva = form.elements["tva"].value;
     listeTaches.push({ tache, quantite, tauxTva });
     afficheDevis(listeTaches)
-    console.log(listeTaches);
+
 }
 
 function afficheCategories() {
@@ -151,7 +151,6 @@ function enregistrerDevis(e)
     listeDevis.push(data);
     afficheListeDevis(listeDevis);
     localStorage.setItem("liste-devis",JSON.stringify(listeDevis));
-    console.log("data",data)
 }
 
 function afficheListeDevis(liste){

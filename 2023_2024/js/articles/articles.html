@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service d'articles</title>
+    <meta charset="UTF-8" />
+    <style>
+        #erreur {
+            color: red;
+        }
+
+        form {
+            margin: 20px;
+        }
+        main section {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid grey;
+        }
+    </style>
+
+    <script src="articles.js"></script>
+
+</head>
+<body>
+    <h1>Des articles</h1>
+    <section>
+        <h2>Un service de recherche d'articles</h2>
+        <form id="recherche">
+            <fieldset>
+                <legend>Chercher par auteur</legend>
+                <label>Auteur <input type="text" name="auteur" id="auteur"></label>
+                <input type="submit" value="Rechercher dans les auteurs">
+                <span id="erreur"></span>
+            </fieldset>
+        </form>
+
+    </section>
+    <main>
+        <h1>Résultats de recherche</h1>
+        <div id="resultats"></div>
+    </main>
+<script>
+"use strict";
+    init();
+</script>
+</body>
+</html>
